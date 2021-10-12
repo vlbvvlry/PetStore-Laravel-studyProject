@@ -12,7 +12,10 @@
       </ul>
 
       <div class="col-md-3 text-end">
-        <a href="/login"><button type="button" class="btn btn-outline-primary me-2">Login</button></a>
-        <a href="/reg"><button type="button" class="btn btn-primary">Sign-up</button></a>
+        <!-- <a href="/login"><button type="button" class="btn btn-outline-primary me-2">Login</button></a>
+        <a href="/reg"><button type="button" class="btn btn-primary">Sign-up</button></a> -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Jryj
+</button>
       </div>
 </header>
