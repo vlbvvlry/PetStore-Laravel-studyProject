@@ -24,13 +24,13 @@
                     <div class="input-group-lg form-group mb-3">
 						<input type="text" class="form-control" placeholder="username">						
 					</div>
-					<div class="input-group-lg form-group mb-3">
+					<div class="input-group-lg form-group mb-5">
 						<input type="password" class="form-control" placeholder="password">
 					</div>
                         <!-- <hr>
                         <button type="submit" class="loginbtn">Login</button> -->
-                        <div class="container text-center">
-                            <button type="button" class="btn btn-primary">LOG IN</button>
+                        <div class="container">
+                            <button type="button" class="btn-lg btn-primary w-100">LOG IN</button>
                         </div>
                     </div>
                 </form>
