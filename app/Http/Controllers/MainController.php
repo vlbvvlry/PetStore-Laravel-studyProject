@@ -11,10 +11,10 @@ class MainController extends Controller
     }
 
     function Reg(){
-        return view('Auth\reg');
+        return redirect('home');
     }
 
     function Login(){
-        return view('Auth\login');
+        return redirect('home');
     }
 }
