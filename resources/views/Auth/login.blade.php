@@ -1,19 +1,31 @@
 @extends('Layout.layout')
 
-@section('title') <title>Log in</title> @endsection
+@section('title') <title>Sign in</title> @endsection
 
 @section('cnt')
-<form method="" action="/auth/login">
-<div class="container">
-    <h1>Log in</h1>
-    <hr>
-    <label for="login"><b>Login</b></label>
-    <input type="text" placeholder="Enter login" name="login" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-    <hr>
-    <button type="submit" class="loginbtn">Log in</button>
-  </div>
+<div class="container text-center">
+<h1>Sign in</h1>
+<br>
+<br>
+<form method="POST" action=" {{ route('user.login') }} ">
+  @csrf
+    <div class="container text-center">
+        <div class="container input-group-md form-group mb-3 w-25">
+            <input type="text" class="form-control" name="email" placeholder="Enter email..">
+            @error('email')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+        <div class="container input-group-md form-group mb-5 w-25">
+            <input type="password" class="form-control" name="password" placeholder="Enter password..">
+            @error('password')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+        <div class="container">
+            <button type="submit" class="btn-md btn-primary w-25">LOG IN</button>
+        </div>
+    </div>
 </form>
+</div>
 @endsection

@@ -15,12 +15,14 @@
     <div class="col-md-3 text-end">
         <!-- <a href="/login"><button type="button" class="btn btn-outline-primary me-2">Login</button></a>
         <a href="/reg"><button type="button" class="btn btn-primary">Sign-up</button></a> -->
-        <button type="button" class="btn btn-primary" style="margin: 0px 5px 0px 0px" data-bs-toggle="modal" data-bs-target="#signinModal">
+        <!-- <button type="button" class="btn btn-primary" style="margin: 0px 5px 0px 0px" data-bs-toggle="modal" data-bs-target="#signinModal">
             Sign in
         </button>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
             Sign up
-        </button>
+        </button> -->
+        <button type="button" class="btn btn-primary"><a href="/login" style="color: white">Sign in</a></button>
+        <button type="button" class="btn btn-primary"><a href="/registration" style="color: white ">Sign up</a></button>
     </div>
 </header>
 
