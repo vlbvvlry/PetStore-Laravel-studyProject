@@ -21,8 +21,13 @@
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
             Sign up
         </button> -->
-        <button type="button" class="btn btn-primary"><a href="/login" style="color: white">Sign in</a></button>
-        <button type="button" class="btn btn-primary"><a href="/registration" style="color: white ">Sign up</a></button>
+        @if(!Auth::check())
+        <a href="/login"><button type="button" class="btn">Log in</button></a>
+        <a href="/registration"><button type="button" class="btn btn-primary">Sign up</button></a>
+        @else
+        <a href="/private"><button type="button" class="btn">Profile</button></a>
+        <a href="/logout"><button type="button" class="btn btn-outline-danger">Logout</button></a>
+        @endif
     </div>
 </header>
 
