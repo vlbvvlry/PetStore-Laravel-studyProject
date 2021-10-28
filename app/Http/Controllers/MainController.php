@@ -17,4 +17,8 @@ class MainController extends Controller
     function Login(){
         return redirect('home');
     }
+
+    function ItemView(){
+        return view('items.mainItemPage');
+    }
 }
