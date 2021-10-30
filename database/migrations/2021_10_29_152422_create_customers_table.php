@@ -17,7 +17,10 @@ class CreateCustomersTable extends Migration
             $table->increments('id');
             $table->string('email', 255)->nullable(false)->unique('email');
             $table->string('password', 255)->nullable(false);
+            $table->boolean('admin')->default(false);
             $table->timestamps();
+
+            $table->primary('id');
         });
     }
 

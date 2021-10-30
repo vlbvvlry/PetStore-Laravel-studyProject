@@ -17,6 +17,8 @@ class CreateBrendsTable extends Migration
             $table->increments('id');
             $table->string('name', 64)->nullable(false);
             $table->string('description', 255);
+
+            $table->primary('id');
         });
     }
 
