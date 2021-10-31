@@ -6,7 +6,7 @@
 <div class="container text-center">
     <h1>Sign up</h1>
     <br>
-    <form method="POST" action="{{ route('user.registration') }}">
+    <form method="POST" action="{{ route('customer.registration') }}">
         @csrf
         <div class="container">
             <div class="container col-4 input-group-md mb-5 w-25">

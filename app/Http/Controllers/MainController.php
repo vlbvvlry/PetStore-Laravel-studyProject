@@ -6,19 +6,23 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    function Home(){
+    function Home()
+    {
         return view('home');
     }
 
-    function Reg(){
+    function Reg()
+    {
         return redirect('home');
     }
 
-    function Login(){
+    function Login()
+    {
         return redirect('home');
     }
 
-    function ItemView(){
+    function ItemView()
+    {
         return view('items.mainItemPage');
     }
 }

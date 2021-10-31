@@ -17,14 +17,14 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name', 64)->nullable(false);
             $table->string('description', 255);
-            $table->decimal('price', 5, 2)->nullable(false)->default(0.0);
+            $table->decimal('price', 5, 2)->nullable(false)->default(0);
             $table->string('image', 255)->default('');
             $table->integer('category_id')->unsigned()->nullable(false);
-            $table->integer('brend_id')->unsigned()->nullable(false);
+            $table->integer('brand_id')->unsigned()->nullable(false);
 
-            $table->primary('id');
+            //$table->primary('id');
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->foreign('brend_id')->references('id')->on('brends');
+            $table->foreign('brand_id')->references('id')->on('brands');
         });
     }
 

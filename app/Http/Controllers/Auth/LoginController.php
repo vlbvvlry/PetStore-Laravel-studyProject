@@ -6,49 +6,36 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Auth;
+use App\Customer;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
+   // use AuthenticatesUsers;
 
-    // use AuthenticatesUsers;
+   function getForm()
+   {
+        if(Auth::check())
+        {
+            return redirect(route('customer.private'));
+        }
+        return view('auth.login');
+   }
 
-    // /**
-    //  * Where to redirect users after login.
-    //  *
-    //  * @var string
-    //  */
-    // protected $redirectTo = '/home';
-
-    // /**
-    //  * Create a new controller instance.
-    //  *
-    //  * @return void
-    //  */
-    // public function __construct()
-    // {
-    //     $this->middleware('guest')->except('logout');
-    // }
+    function logout()
+    {
+        Auth::logout();
+        return redirect('home');
+    }
 
     public function login(Request $request)
     {
         $formFields = $request->only(['email','password']);
         if(Auth::attempt($formFields))
         {
-            return redirect()->intended(route('user.private'));
+            return redirect(route('customer.private'));
         }
-
-        return redirect(route('user.login'))->withErrors([
-            'email' => 'Fail'
+        return redirect(route('customer.login'))->withErrors([
+            'email' => 'Error. Repeat, please.'
         ]);
     }
 }

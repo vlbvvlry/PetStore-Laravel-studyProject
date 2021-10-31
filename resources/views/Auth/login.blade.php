@@ -7,7 +7,7 @@
 <h1>Sign in</h1>
 <br>
 <br>
-<form method="POST" action=" {{ route('user.login') }} ">
+<form method="POST" action=" {{ route('customer.login') }} ">
   @csrf
     <div class="container text-center">
         <div class="container input-group-md form-group mb-3 w-25">

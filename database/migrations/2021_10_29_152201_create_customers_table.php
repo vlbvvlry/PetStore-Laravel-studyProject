@@ -20,7 +20,7 @@ class CreateCustomersTable extends Migration
             $table->boolean('admin')->default(false);
             $table->timestamps();
 
-            $table->primary('id');
+            //$table->primary('id');
         });
     }
 

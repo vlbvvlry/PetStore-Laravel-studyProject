@@ -18,10 +18,10 @@ class CreateOrdersTable extends Migration
             $table->date('order_date');
             $table->date('delivery_date');
             $table->string('status');
-            $table->decimal('order_sum', 5, 2)->default(0.0);
+            $table->decimal('order_sum', 5, 2)->default(0);
             $table->integer('customer_id')->unsigned()->nullable(false);
 
-            $table->primary('id');
+            //$table->primary('id');
             $table->foreign('customer_id')->references('id')->on('customers');
         });
     }
