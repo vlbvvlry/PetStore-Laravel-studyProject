@@ -12,20 +12,22 @@ class LoginController extends Controller
 {
    // use AuthenticatesUsers;
 
-   function getForm()
-   {
+    function getForm()
+    {
         if(Auth::check())
         {
             return redirect(route('customer.private'));
         }
         return view('auth.login');
-   }
+    }
+
 
     function logout()
     {
         Auth::logout();
         return redirect('home');
     }
+    
 
     public function login(Request $request)
     {

@@ -6,7 +6,9 @@
 <div class="container text-center">
     <h1 class="h1">ITEMSPAGE</h1>
     
-    <div></div>
+    <div class="container">
+        
+    </div>
     
 </div>
 @endsection
