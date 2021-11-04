@@ -4,6 +4,7 @@ Route::get('/', 'MainController@Home');
 Route::get('/home', 'MainController@Home');
 Route::get('/items', 'MainController@ItemView');
 Route::get('/add', 'MainController@AddProdView')->name('add');
+Route::get('/product/{id}', 'MainController@ProductView');
 
 Route::post('/add', 'MainController@AddProd');
 

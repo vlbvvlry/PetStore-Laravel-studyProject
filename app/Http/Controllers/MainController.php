@@ -28,7 +28,13 @@ class MainController extends Controller
 
     function ItemView()
     {
-        dd(Product::all());
+        //dd(Product::all());
+        return view('items.mainItemPage', ['products' => Product::all()]);
+    }
+
+    function ProductView($id)
+    {
+        return view('items.moreItemPage', ['product' => Product::find($id)]);
     }
 
     function AddProdView()
