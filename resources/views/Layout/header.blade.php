@@ -7,27 +7,26 @@
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
         <li><a href="/items" class="nav-link px-2 link-dark">Products</a></li>
-        <!-- <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">About</a></li> -->
+        <!-- <li><a href="/" class="nav-link px-2 link-dark">Cart</a></li> -->
     </ul>
 
     <div class="col-md-3 text-end">
-        <!-- <a href="/login"><button type="button" class="btn btn-outline-primary me-2">Login</button></a>
-        <a href="/reg"><button type="button" class="btn btn-primary">Sign-up</button></a> -->
-        <!-- <button type="button" class="btn btn-primary" style="margin: 0px 5px 0px 0px" data-bs-toggle="modal" data-bs-target="#signinModal">
-            Sign in
-        </button>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
-            Sign up
-        </button> -->
         @if(!Auth::check())
         <a href="/login"><button type="button" class="btn">Log in</button></a>
         <a href="/registration"><button type="button" class="btn btn-primary">Sign up</button></a>
         @else
-        <a href="/private"><button type="button" class="btn">Profile</button></a>
-        <a href="/logout"><button type="button" class="btn btn-outline-danger">Logout</button></a>
+        <!-- <a href="/private"><button type="button" class="btn">Profile</button></a> -->
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="profile"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Profile
+            </button>
+            <a href="/logout"><button type="button" class="btn btn-outline-danger">Logout</button></a>
+            <div class="dropdown-menu" aria-labelledby="profile">
+                <a class="dropdown-item" href="/cart">Cart</a>
+                <a class="dropdown-item" href="/private">History</a>
+            </div>
+        </div>
         @endif
     </div>
 </header>

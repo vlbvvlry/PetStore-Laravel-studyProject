@@ -34,7 +34,15 @@ class MainController extends Controller
 
     function ProductView($id)
     {
-        return view('items.moreItemPage', ['product' => Product::find($id)]);
+        $p = Product::find($id);
+        return view('items.moreItemPage', ['product' => $p,
+         'cat' => Category::find($p->category_id),
+         'bra' => Brand::find($p->brand_id)]);
+    }
+
+    function CartView()
+    {
+        return view('items.cart');
     }
 
     function AddProdView()

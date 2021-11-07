@@ -5,6 +5,7 @@ Route::get('/home', 'MainController@Home');
 Route::get('/items', 'MainController@ItemView');
 Route::get('/add', 'MainController@AddProdView')->name('add');
 Route::get('/product/{id}', 'MainController@ProductView');
+Route::get('/cart','MainController@CartView');
 
 Route::post('/add', 'MainController@AddProd');
 
