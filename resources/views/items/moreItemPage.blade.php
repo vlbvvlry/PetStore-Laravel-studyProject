@@ -2,12 +2,6 @@
 @section('title')
 <title>Product</title>
 @endsection
-<!-- @section('cnt')
-<div class="container text-center">
-    <h1>Details of product "{{ $product->name }}" here.</h1>
-    <br>
-    <p>{{ $product->description }}</p>
-</div> -->
 @section('cnt')
 <div class="container">
     <div class="container row mb-5">
@@ -72,9 +66,6 @@
             </div>
         </div>
     </div>
-
-
-    <!-- вкладки -->
     <div>
         <ul class="nav nav-tabs mb-3">
             <li class="nav-item">

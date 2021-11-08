@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <div class="container">
+    <!-- <div class="container"> -->
         @include('Layout.header')
-    </div>
+    <!-- </div> -->
     <div>
         @yield('cnt')
     </div>

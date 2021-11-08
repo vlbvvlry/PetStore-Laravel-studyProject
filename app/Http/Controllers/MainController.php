@@ -16,16 +16,6 @@ class MainController extends Controller
         return view('home');
     }
 
-    function Reg()
-    {
-        return redirect('home');
-    }
-
-    function Login()
-    {
-        return redirect('home');
-    }
-
     function ItemView()
     {
         //dd(Product::all());
@@ -43,15 +33,6 @@ class MainController extends Controller
     function CartView()
     {
         return view('items.cart');
-    }
-
-    function AddProdView()
-    {
-        if(!Auth::check())
-        {
-            return redirect('home');
-        }
-        return view('addProductForm', ['cats' => Category::all(), 'brands' => Brand::all()]);
     }
 
     function AddProd(Request $r)

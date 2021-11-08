@@ -3,11 +3,18 @@
 Route::get('/', 'MainController@Home');
 Route::get('/home', 'MainController@Home');
 Route::get('/items', 'MainController@ItemView');
-Route::get('/add', 'MainController@AddProdView')->name('add');
 Route::get('/product/{id}', 'MainController@ProductView');
 Route::get('/cart','MainController@CartView');
 
 Route::post('/add', 'MainController@AddProd');
+
+Route::name('admin.')->group(function()
+{
+    Route::get('/admin', 'AdminController@PanelView')->name('panel');
+    Route::get('/admin/add', 'AdminController@AddProductView')->name('add');
+
+    Route::post('/admin/add', 'AdminController@AddProduct');
+});
 
 //Route Group for auth/customers
 Route::name('customer.')->group(function()
