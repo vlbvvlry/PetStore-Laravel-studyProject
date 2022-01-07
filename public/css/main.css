@@ -1,0 +1,59 @@
+.delete {
+    position: absolute;
+    opacity: 0.3;
+}
+
+.delete:hover {
+    opacity: 1;
+}
+
+.delete:before,
+.delete:after {
+    position: absolute;
+    left: 10px;
+    content: ' ';
+    height: 10px;
+    width: 1px;
+    background-color: black;
+}
+
+.delete:before {
+    transform: rotate(45deg);
+}
+
+.delete:after {
+    transform: rotate(-45deg);
+}
+
+
+header {
+    position: static;
+    left: 0;
+    right: 0; 
+    z-index: 1; 
+    top: 0; 
+}
+
+
+table {
+    table-layout: fixed;
+    min-height: 350px;
+}
+
+td {
+  height: 80px;
+}
+
+.scale {
+    display: inline-block; /* Строчно-блочный элемент */
+    overflow: hidden; /* Скрываем всё за контуром */
+}
+
+.scale img {
+    transition: 1s; /* Время эффекта */
+    display: block; /* Убираем небольшой отступ снизу */
+}
+
+.scale img:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+}

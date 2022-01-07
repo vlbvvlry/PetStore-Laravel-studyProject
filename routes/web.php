@@ -5,8 +5,10 @@ Route::get('/home', 'MainController@Home');
 Route::get('/items', 'MainController@ItemView');
 Route::get('/product/{id}', 'MainController@ProductView');
 Route::get('/cart','MainController@CartView');
+Route::get('/cartclear','MainController@ClearCart');
+Route::get('/cart/delete/{id}','MainController@DeleteItemCart');
 
-Route::post('/add', 'MainController@AddProd');
+Route::post('/cart','MainController@UpdateCart')->name('UpdateCart');
 
 Route::name('admin.')->group(function()
 {
@@ -16,7 +18,6 @@ Route::name('admin.')->group(function()
     Route::post('/admin/add', 'AdminController@AddProduct');
 });
 
-//Route Group for auth/customers
 Route::name('customer.')->group(function()
 {
     Route::view('/private','private')->middleware('auth')->name('private');
@@ -27,3 +28,8 @@ Route::name('customer.')->group(function()
     Route::post('/login', 'Auth\LoginController@login');
     Route::post('/registration','Auth\RegisterController@save');
 });
+
+
+//Debug
+Route::get('/ddS','MainController@ddS');
+Route::get('/cS','MainController@cS');

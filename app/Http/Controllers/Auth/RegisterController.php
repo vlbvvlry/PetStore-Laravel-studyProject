@@ -44,7 +44,7 @@ class RegisterController extends Controller
         if($customer)
         {
             Auth::login($customer);
-            return redirect()->to(route('customer.private'));
+            return redirect('/');
         }
         return redirect()->to(route('customer.login'))->withErrors([
             'formError' => 'Error'

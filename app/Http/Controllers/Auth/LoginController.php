@@ -34,7 +34,7 @@ class LoginController extends Controller
         $formFields = $request->only(['email','password']);
         if(Auth::attempt($formFields))
         {
-            return redirect(route('customer.private'));
+            return redirect('/');
         }
         return redirect(route('customer.login'))->withErrors([
             'email' => 'Error. Repeat, please.'
