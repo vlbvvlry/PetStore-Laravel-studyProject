@@ -63,7 +63,7 @@
                             <div class="col mt-1">
                                 <h2 class="h2">{{ $product->price }} RUB.</h2>
                             </div>
-                            <div class="col-1"></div>                           
+                            <div class="col-1"></div>
                         </div>
                     </div>
                 </div>

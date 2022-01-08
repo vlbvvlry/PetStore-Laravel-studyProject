@@ -24,21 +24,34 @@ class AdminController extends Controller
 
     function AddProduct(Request $r)
     {
-         $add = $r->validate([
-            'image' => 'required',
-            'name' => 'required',
-            'description' => '',
-            'category_id' => 'required',
-            'brand_id' => 'required',
-            'price' => 'required'
-        ]);
+        //dd($r);
+        //  $add = $r->validate([
+        //     'name' => 'required',
+        //     'description' => '',
+        //     'category_id' => 'required',
+        //     'brand_id' => 'required',
+        //     'price' => 'required'
+        // ]);
+
+        //dd($_FILES);
+
+        $dir_upload_img = '/uploads/';
+        $uploadfile = $dir_upload_img . basename($_FILES['userfile']['name']);
+        copy($_FILES['userfile']['tmp_name'], SITE_ROOT.$uploadfile);
+
+        //dd($_FILES);
+
+        $add = $r->only(['name','description','category_id','brand_id','price']);
+        $add['image'] = $uploadfile;
+        
+        //dd($add);
 
         $product = Product::create($add);
         if($product)
         {
-            return redirect('home');
+            return redirect('/home');
         }
         return redirect(route('customer.private'));
-        //dd($r);
+        
     }
 }

@@ -57,3 +57,7 @@ td {
 .scale img:hover {
     transform: scale(1.2); /* Увеличиваем масштаб */
 }
+
+textarea {
+    resize: none;
+}

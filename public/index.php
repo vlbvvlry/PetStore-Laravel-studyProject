@@ -8,6 +8,7 @@
  */
 
 define('LARAVEL_START', microtime(true));
+define('SITE_ROOT', realpath(dirname(__FILE__)));
 
 /*
 |--------------------------------------------------------------------------
