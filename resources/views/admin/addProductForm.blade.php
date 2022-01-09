@@ -13,8 +13,8 @@
             <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
             {{-- <input class="form-control mb-3" type="text" placeholder="image" name="image"> --}}
             <input class="form-control mb-3" type="file" name="userfile">
-            <input class="form-control mb-3" type="text" placeholder="name" name="name" required>
             <input class="form-control mb-3" type="text" placeholder="price" name="price" required>
+            <input class="form-control mb-3" type="text" placeholder="name" name="name" required>
             <textarea class="form-control mb-3" rows="6" placeholder="description" name="description" maxlength=254></textarea>
             <div class="row mx-1 mb-3">
                 <div class="col p-0 mx-1">

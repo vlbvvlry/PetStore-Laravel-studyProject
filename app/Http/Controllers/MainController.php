@@ -16,7 +16,10 @@ class MainController extends Controller
  
     function Home()
     {
-        return view('home');
+        array_key_exists('cart', $_SESSION) ? : $_SESSION['cart'] = null;
+
+        $products = Product::orderBy('id','asc')->take(4)->get();
+        return view('home', ['products' => $products]);
     }
 
     function ItemView()

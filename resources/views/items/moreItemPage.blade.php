@@ -6,7 +6,7 @@
 <div class="container w-75">
     <div class="container row mb-5">
         <div class="col-lg-4 col-md-4 col-sm-12">
-            <img src="{{ $product->image }}" class="img-fluid rounded-top border-bottom">
+            <img src="{{ $product->image }}" class="img-fluid rounded-top">
         </div>
         <div class="col-lg-8 col-md-8 col-sm-12 desc">
             <div class="container">
